@@ -166,7 +166,6 @@ public class GerenciaBD implements IGerenciaBD {
 
     //Buscas
 
-
     @Override
     public Cursor buscaUnidadeById(int id) {
         Cursor cursor;

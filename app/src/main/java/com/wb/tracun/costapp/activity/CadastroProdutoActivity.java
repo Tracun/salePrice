@@ -49,8 +49,6 @@ public class CadastroProdutoActivity extends AppCompatActivity {
         builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getBaseContext(), "getOffscreenPageLimit() " + viewPager.getOffscreenPageLimit(), Toast.LENGTH_SHORT).show();
-
                 finish();
             }
         });

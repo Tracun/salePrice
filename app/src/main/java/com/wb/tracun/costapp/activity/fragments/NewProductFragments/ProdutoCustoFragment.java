@@ -58,6 +58,7 @@ public class ProdutoCustoFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 txtCusto.setText("R$ " + calcularCustoProduto(view));
+                mPieChart.clearChart();
                 plotPieChart(view);
             }
         });
@@ -84,11 +85,9 @@ public class ProdutoCustoFragment extends Fragment {
 
         mPieChart = (PieChart) view.findViewById(R.id.costPieGraph);
 
-        mPieChart.setUseInnerValue(true);
-
-        mPieChart.addPieSlice(new PieModel("Insumos", mValorInsumos, R.color.insumoColor));
-        mPieChart.addPieSlice(new PieModel("Rateio", mValorRateio, R.color.rateioColor));
-        mPieChart.addPieSlice(new PieModel("Temp Fab", mValorTempoFab, R.color.tempoFabColor));
+        mPieChart.addPieSlice(new PieModel("Insumos", mValorInsumos, Color.parseColor("#FE6DA8")));
+        mPieChart.addPieSlice(new PieModel("Rateio", mValorRateio, Color.parseColor("#56B7F1")));
+        mPieChart.addPieSlice(new PieModel("Temp Fab", mValorTempoFab, Color.parseColor("#CDA67F")));
 
         mPieChart.setLegendHeight(2f);
 
